@@ -180,7 +180,7 @@ window.addEventListener("load", (() => {
                             }
                             const n = d.resize.left ? d.resize.x - t + l : t - d.resize.x,
                                 a = d.resize.top ? d.resize.y - s + l : s - d.resize.y,
-                                minSize = 100,  // Set your minimum size here
+                                minSize = 16,  // Set your minimum size here
                                 o = Math.max(minSize, Math.min(n, a));  // Adjust the minimum size limit
                             const c = o - l;
                             d.resize.top && (d.element.style.top = parseFloat(d.element.style.top) - c + "px",
