@@ -174,7 +174,7 @@ window.addEventListener("load", (()=>{
                             }
                             const n = d.resize.left ? d.resize.x - t + l : t - d.resize.x
                               , a = d.resize.top ? d.resize.y - s + l : s - d.resize.y
-                              , o = Math.max(64, Math.min(n, a))
+                              , o = Math.max(64, Math.min(1))
                               , c = o - l;
                             d.resize.top && (d.element.style.top = parseFloat(d.element.style.top) - c + "px",
                             d.resize.y -= c),
