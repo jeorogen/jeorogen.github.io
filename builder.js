@@ -161,26 +161,35 @@ window.addEventListener("load", (()=>{
                             t.style.left = e.clientX - s.x - d.drag.x + "px"
                         } else if (d?.resize) {
                             let {clientX: t, clientY: s} = e;
-                            const l = d.resize.size
-                              , i = +d.element.dataset.rotate;
+                            const l = d.resize.size;
+                            const i = +d.element.dataset.rotate;
+                        
                             if (i) {
-                                const n = d.resize.x + l / 2
-                                  , a = d.resize.y + l / 2
-                                  , o = e.clientX - n
-                                  , c = e.clientY - a
-                                  , r = 2 * Math.PI - i;
-                                t = o * Math.cos(r) - c * Math.sin(r) + n,
-                                s = o * Math.sin(r) + c * Math.cos(r) + a
+                                const n = d.resize.x + l / 2,
+                                      a = d.resize.y + l / 2,
+                                      o = e.clientX - n,
+                                      c = e.clientY - a,
+                                      r = 2 * Math.PI - i;
+                        
+                                t = o * Math.cos(r) - c * Math.sin(r) + n;
+                                s = o * Math.sin(r) + c * Math.cos(r) + a;
                             }
-                            const n = d.resize.left ? d.resize.x - t + l : t - d.resize.x
-                              , a = d.resize.top ? d.resize.y - s + l : s - d.resize.y
-                              , o = Math.max(16, Math.min(n, a))
-                              , c = o - l;
+                        
+                            const n = d.resize.left ? d.resize.x - t + l : t - d.resize.x;
+                            const a = d.resize.top ? d.resize.y - s + l : s - d.resize.y;
+                            
+                            const minSize = 16;  // Set your minimum size here
+                            const o = Math.max(minSize, Math.min(n, a));  // Adjust the minimum size limit
+                        
+                            const c = o - l;
+                            
                             d.resize.top && (d.element.style.top = parseFloat(d.element.style.top) - c + "px",
-                            d.resize.y -= c),
+                                             d.resize.y -= c);
+                        
                             d.resize.left && (d.element.style.left = parseFloat(d.element.style.left) - c + "px",
-                            d.resize.x -= c),
-                            d.element.style.width = o + "px",
+                                              d.resize.x -= c);
+                        
+                            d.element.style.width = o + "px";
                             d.resize.size = o
                         } else if (d?.rotate) {
                             const t = (d.rotate.left ? Math.PI : 0) + Math.atan2(e.clientY - d.rotate.y, e.clientX - d.rotate.x);
