@@ -604,8 +604,9 @@ footer {
     left: 1rem;
     background: #fff;
     border-radius: .5rem;
-    overflow: auto;
-    max-height: calc(100% - 2rem);
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 400px; /* Limit the toolbar height */
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     width: 100%; /* Full width on mobile */
     max-width: 2000px; /* Limit toolbar width to 2000px */
