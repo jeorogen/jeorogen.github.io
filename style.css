@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-body, html {
+body,html {
     overscroll-behavior: none;
 }
 
@@ -356,8 +356,7 @@ footer {
     height: calc(var(--h) - 5rem);
 }
 
-.builder .inner,
-.builder .upload-wrapper {
+.builder .inner, .builder .upload-wrapper {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -371,14 +370,14 @@ footer {
     border: 0;
     display: flex;
     flex-direction: column;
+    grid-gap: 4rem;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     text-align: center;
     padding: 1rem;
     color: #fff;
     font-size: 2rem;
-    grid-gap: 1.5rem;
-    cursor: pointer;
 }
 
 .builder .upload-wrapper .title {
@@ -386,31 +385,16 @@ footer {
     font-size: 5rem;
 }
 
-.builder .upload-wrapper .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-gap: 1rem;
-}
-
-.builder .buttons .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding: 0.5rem 1.5rem; /* Adjust padding for larger text */
-    background: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
 .builder .upload {
     display: none;
 }
 
-.builder .canvas,
-.builder .layers {
+.builder .inner {
+    display: none;
+    background: #1b0f0f;
+}
+
+.builder .canvas, .builder .layers {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -425,29 +409,246 @@ footer {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.375);
 }
 
-.builder .buttons .button.save {
-    background-color: #28a745;
+.builder .layer {
+    position: absolute;
+    user-select: none;
+    cursor: move;
 }
 
-.builder .buttons .button.reupload {
-    background-color: #ffc107;
+.builder .layer-t {
+    transform-origin: center;
+}
+
+.builder .layer-t * {
+    user-select: none;
+}
+
+.builder .layer.selected .layer-t {
+    background: rgba(0, 0, 0, .25);
+}
+
+.builder .text-layer {
+    position: absolute;
+    font-size: 3rem;
+    border: .25rem solid transparent;
+}
+
+.builder .text-layer .text {
+    color: #fff;
+    padding: .5rem 1.5rem;
+    text-shadow: 0 0 .25em #000;
+    white-space: pre;
+    line-height: 1em;
+}
+
+.builder .text-layer .text:focus {
+    outline: 0;
+}
+
+.builder .text-layer.selected {
+    border-color: #fff;
+    border-radius: .5rem;
+}
+
+.builder .layer .resize {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: .5rem solid #fff;
+}
+
+.builder .layer:not(.selected) .action, .builder .layer:not(.selected) .resize, .builder .text-layer:not(.selected) .action {
+    display: none;
+}
+
+.builder .layer .resize.bottom.right, .builder .layer .resize.top.left {
+    cursor: nwse-resize;
+}
+
+.builder .layer .resize.bottom.left, .builder .layer .resize.top.right {
+    cursor: nesw-resize;
+}
+
+.builder .layer .resize.top.left {
+    border-top-left-radius: .75rem;
+}
+
+.builder .layer .resize.top.right {
+    border-top-right-radius: .75rem;
+}
+
+.builder .layer .resize.bottom.left {
+    border-bottom-left-radius: .75rem;
+}
+
+.builder .layer .resize.bottom.right {
+    border-bottom-right-radius: .75rem;
+}
+
+.builder .layer .resize.top {
+    top: -.5rem;
+    border-bottom: 0;
+    cursor: nwse-resize;
+}
+
+.builder .layer .resize.bottom {
+    bottom: -.5rem;
+    border-top: 0;
+}
+
+.builder .layer .resize.left {
+    left: -.5rem;
+    border-right: 0;
+}
+
+.builder .layer .resize.right {
+    right: -.5rem;
+    border-left: 0;
+}
+
+.builder .action {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    font-size: 3rem;
+    transition: .2s linear;
+    user-select: none;
+    cursor: pointer;
+}
+
+.builder .action img {
+    display: block;
+    pointer-events: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: .85;
+    transition: .2s linear;
+}
+
+.builder .layer .action:hover img {
+    opacity: 1;
+}
+
+.builder .flip, .builder .move, .builder .remove {
+    left: calc(50% - 1.5rem);
+}
+
+.builder .move, .builder .rotate {
+    top: calc(50% - 1.5rem);
+}
+
+.builder .rotate.left {
+    left: -4rem;
+}
+
+.builder .rotate.right {
+    right: -4rem;
+}
+
+.builder .flip, .builder .move, .builder .text-minus, .builder .text-plus {
+    top: -4rem;
+}
+
+.builder .remove {
+    bottom: -4rem;
+}
+
+.builder .remove:hover {
+    background: rgba(161, 75, 75, .5);
+}
+
+.builder .move {
+    cursor: move;
+}
+
+.builder .text-minus {
+    left: calc(50% - 5rem);
+}
+
+.builder .text-plus {
+    right: calc(50% - 5rem);
+}
+
+.builder .layer-t>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.builder .layer.flipped .layer-t>img {
+    transform: scaleX(-1);
+}
+
+.builder .tools {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: auto;
+    max-height: calc(100% - 2rem);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    width: 100%; /* Full width on mobile */
+    max-width: 600px; /* Limit toolbar width on larger screens */
+    padding: 0.5rem; /* Add padding for a cleaner look */
+}
+
+.builder .tools img {
+    display: block;
+    width: 3rem;
+    padding: .5rem .75rem;
+    cursor: pointer;
+}
+
+.builder .tools .tool-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem .75rem;
+    font-size: 1.75rem;
+    text-align: center;
+    cursor: pointer;
+    font: "CodeSaver";
+}
+
+.builder .buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    grid-gap: 1rem; /* Adds space between buttons */
+    margin-top: 1rem;
+}
+
+.builder .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make buttons full width */
+    max-width: 250px;
+    padding: 0.5rem;
+    background-color: var(--button-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .builder .button img {
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Add space between icon and text */
 }
 
-/* Toolbar adjustments for mobile */
-@media screen and (max-width: 800px) {
-    .builder .tools {
-        width: 100%; /* Make toolbar wider */
-        display: flex;
-        flex-wrap: wrap; /* Ensure toolbar elements wrap on smaller screens */
-        justify-content: space-between;
-        padding: 1rem;
-    }
+/* button image size */
+.builder .buttons img {
+    width: 1.5rem;
 }
 
 /* ######################################## */
@@ -458,6 +659,11 @@ footer {
         height: calc(var(--h) - 4.5rem);
     }
 
+    .builder .tools {
+        width: 90%; /* Make toolbar wider on mobile */
+        margin: 0 auto; /* Center toolbar on mobile */
+    }
+
     .builder .canvas {
         max-height: calc(var(--h) - 7rem);
     }
@@ -466,8 +672,7 @@ footer {
 /* ######################################## */
 
 @media screen and (orientation: portrait) {
-    .builder .canvas,
-    .builder .layers {
+    .builder .canvas, .builder .layers {
         transform: translate(-50%, calc(-50% - 2.5rem));
     }
 
