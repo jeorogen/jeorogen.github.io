@@ -4,13 +4,13 @@
     --accent-color: #1b0f0f;
     --button-color: #ff4a42;
     --meme-w: 16rem;
-    font-size: 16px
+    font-size: 16px;
 }
 
 * {
     font-family: CodeSaver;
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
@@ -18,22 +18,21 @@
     src: url('CodeSaver-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-
-body,html {
-    overscroll-behavior: none
+body, html {
+    overscroll-behavior: none;
 }
 
 body {
     --h: 100vh;
     margin: 0 auto;
     color: var(--accent-color);
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 .t {
-    font-family: CodeSaver
+    font-family: CodeSaver;
 }
 
 .button {
@@ -43,11 +42,11 @@ body {
     text-decoration: none;
     font-size: 1.625rem;
     border-radius: .25rem;
-    transition: opacity .2s linear
+    transition: opacity .2s linear;
 }
 
 .button:hover {
-    opacity: .8
+    opacity: .8;
 }
 
 nav {
@@ -55,7 +54,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--primary-color)
+    background: var(--primary-color);
 }
 
 nav .wrapper {
@@ -64,53 +63,53 @@ nav .wrapper {
     width: calc(100% - 2rem);
     display: flex;
     align-items: center;
-    padding: .75rem 0
+    padding: .75rem 0;
 }
 
 nav .logo {
     display: block;
-    height: 3.5rem
+    height: 3.5rem;
 }
 
 nav .links {
     display: flex;
     align-items: center;
     grid-gap: 1rem;
-    margin-left: auto
+    margin-left: auto;
 }
 
 nav .links img {
     display: block;
-    width: 1.25rem
+    width: 1.25rem;
 }
 
 nav .links .anchor+:not(.anchor) {
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
 nav .button {
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
 nav a {
     color: #fff;
     font-size: 1.5rem;
-    text-decoration: none
+    text-decoration: none;
 }
 
 /* ######################################## */
 
 @media screen and (max-width: 800px) {
     nav .logo {
-        height:3rem
+        height: 3rem;
     }
 
     nav .button {
-        font-size: 1.25rem
+        font-size: 1.25rem;
     }
 
     nav .anchor {
-        display: none
+        display: none;
     }
 }
 
@@ -118,7 +117,7 @@ nav a {
 
 @media screen and (max-width: 460px) {
     nav .ticker {
-        display:none
+        display: none;
     }
 }
 
@@ -127,32 +126,32 @@ header {
     background: var(--primary-color);
     color: var(--header-text-color);
     padding: 4.5rem 1rem 6rem;
-    overflow: hidden
+    overflow: hidden;
 }
 
 header .title {
     margin-top: 4rem;
     font-size: 3.5rem;
-    text-align: center
+    text-align: center;
 }
 
 /* ######################################## */
 
 @media screen and (max-width: 620px) {
     header .title {
-        font-size:2.5rem
+        font-size: 2.5rem;
     }
 }
 
 header .subtitle {
     margin-top: 1rem;
     font-size: 1.75rem;
-    text-align: center
+    text-align: center;
 }
 
 header .button-wrapper {
     margin-top: 3rem;
-    text-align: center
+    text-align: center;
 }
 
 header .banner {
@@ -160,12 +159,12 @@ header .banner {
     position: absolute;
     bottom: 0;
     left: calc(50vw + 11rem);
-    width: 28rem
+    width: 28rem;
 }
 
 section {
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 section .wrapper {
@@ -174,46 +173,46 @@ section .wrapper {
     flex-direction: column;
     width: 42rem;
     max-width: 100%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 section .image {
     position: absolute;
     bottom: 0;
-    right: calc(50vw + 14rem)
+    right: calc(50vw + 14rem);
 }
 
 section .image img {
     display: block;
-    width: 30rem
+    width: 30rem;
 }
 
 .content {
     margin: 0 auto;
     padding: 3rem 1rem;
     padding-left: 12rem;
-    font-size: 1.375rem
+    font-size: 1.375rem;
 }
 
 .content .section-title {
     margin-top: 2rem;
     text-align: center;
-    font-size: 2.25rem
+    font-size: 2.25rem;
 }
 
 .content .title {
     margin-top: 2rem;
-    font-size: 2rem
+    font-size: 2rem;
 }
 
 .content .text {
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .content .button {
     padding-top: 2.75rem;
     padding-bottom: 1rem;
-    text-align: center
+    text-align: center;
 }
 
 .content .button a {
@@ -221,86 +220,85 @@ section .image img {
     background: #3c4b7c;
     color: var(--header-text-color);
     text-decoration: none;
-    font-size: 1.65rem
+    font-size: 1.65rem;
 }
 
-#buy,#token {
+#buy, #token {
     background: var(--primary-color);
-    color: #fff
+    color: #fff;
 }
 
 #buy a {
-    color: #fff
+    color: #fff;
 }
 
 #buy .image {
     right: unset;
-    left: calc(50vw + 15rem)
+    left: calc(50vw + 15rem);
 }
 
 #buy .image img {
-    width: 22rem
+    width: 22rem;
 }
 
 #buy .image {
-    top: calc(50% - 350px)
+    top: calc(50% - 350px);
 }
 
 #buy .content {
     padding-left: unset;
     padding-right: 12rem;
-    max-width: calc(100% - 2rem)
+    max-width: calc(100% - 2rem);
 }
 
 #memes {
     padding-top: 5rem;
     padding-bottom: 10rem;
     background: var(--primary-color);
-    color: var(--header-text-color)
+    color: var(--header-text-color);
 }
 
 #memes .title {
     text-align: center;
     font-size: 2.25rem;
-    padding-bottom: 2.5rem
+    padding-bottom: 2.5rem;
 }
 
 #memes .wrapper {
-    padding: 0 1rem
+    padding: 0 1rem;
 }
 
 #memes .images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 2rem
+    grid-gap: 2rem;
 }
 
 #memes .images img {
     display: block;
     width: var(--meme-w);
     height: var(--meme-w);
-    border-radius: .5rem
+    border-radius: .5rem;
 }
 
 footer {
     text-align: center;
     background: #131313;
     color: #aaa;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .builder .upload-wrapper .title {
     text-transform: uppercase;
-    font-size: 2rem
+    font-size: 2rem;
 }
-
 
 /* ######################################## */
 
 @media screen and (max-width: 1200px) {
     header {
-        padding-bottom:0
+        padding-bottom: 0;
     }
 
     header .banner {
@@ -311,36 +309,36 @@ footer {
         margin-top: 2rem;
         margin-left: auto;
         margin-right: 0;
-        max-width: calc(100% - 2rem)
+        max-width: calc(100% - 2rem);
     }
 
     section .image {
         position: relative;
         right: unset;
-        align-self: flex-start
+        align-self: flex-start;
     }
 
     section .image img {
         width: calc(100% - 2rem);
-        max-width: 18rem
+        max-width: 18rem;
     }
 
     section .content {
-        padding-left: 1rem!important;
-        padding-right: 1rem!important
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 
     #buy .image {
         left: unset;
-        align-self: center
+        align-self: center;
     }
 
     #buy .image img {
-        max-width: 36rem
+        max-width: 36rem;
     }
 
     .desktop-only {
-        display: none!important
+        display: none !important;
     }
 }
 
@@ -348,59 +346,76 @@ footer {
 
 @media screen and (min-width: 1200px) {
     .mobile-only {
-        display:none!important
+        display: none !important;
     }
 }
 
 .builder {
     position: relative;
     margin-top: 5rem;
-    height: calc(var(--h) - 5rem)
+    height: calc(var(--h) - 5rem);
 }
 
-.builder .inner,.builder .upload-wrapper {
+.builder .inner,
+.builder .upload-wrapper {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .builder .upload-wrapper {
     background: var(--accent-color);
     border: 0;
     display: flex;
-    flex-direction: column;
-    grid-gap: 4rem;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     text-align: center;
     padding: 1rem;
     color: #fff;
-    font-size: 2rem
+    font-size: 2rem;
+    grid-gap: 1.5rem; /* Adds space between title, image selector, and buttons */
+    cursor: pointer;
 }
 
 .builder .upload-wrapper .title {
     text-transform: uppercase;
-    font-size: 5rem
+    font-size: 5rem;
+}
+
+.builder .upload-wrapper .buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    grid-gap: 1rem; /* Adds space between buttons */
+}
+
+.builder .buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem; /* Button width */
+    height: 3.5rem;
+    padding: 0;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    cursor: pointer;
 }
 
 .builder .upload {
-    display: none
-}
-
-.builder .inner {
     display: none;
-    background: #1b0f0f;
 }
 
-.builder .canvas,.builder .layers {
+.builder .canvas,
+.builder .layers {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%);
 }
 
 .builder .canvas {
@@ -408,267 +423,48 @@ footer {
     max-width: calc(100% - 13rem);
     max-height: calc(var(--h) - 9rem);
     background: #fff;
-    box-shadow: 0 0 2rem rgba(0,0,0,.375)
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .375);
 }
 
-.builder .layer {
-    position: absolute;
-    user-select: none;
-    cursor: move
+/* Save and Reupload Buttons */
+.builder .buttons .button.save {
+    background-color: #28a745; /* Save button color */
 }
 
-.builder .layer-t {
-    transform-origin: center
+.builder .buttons .button.reupload {
+    background-color: #ffc107; /* Reupload button color */
 }
 
-.builder .layer-t * {
-    user-select: none
-}
-
-.builder .layer.selected .layer-t {
-    background: rgba(0,0,0,.25)
-}
-
-.builder .text-layer {
-    position: absolute;
-    font-size: 3rem;
-    border: .25rem solid transparent
-}
-
-.builder .text-layer .text {
-    color: #fff;
-    padding: .5rem 1.5rem;
-    text-shadow: 0 0 .25em #000;
-    white-space: pre;
-    line-height: 1em
-}
-
-.builder .text-layer .text:focus {
-    outline: 0
-}
-
-.builder .text-layer.selected {
-    border-color: #fff;
-    border-radius: .5rem
-}
-
-.builder .layer .resize {
-    position: absolute;
+.builder .button img {
     width: 1.5rem;
     height: 1.5rem;
-    border: .5rem solid #fff
-}
-
-.builder .layer:not(.selected) .action,.builder .layer:not(.selected) .resize,.builder .text-layer:not(.selected) .action {
-    display: none
-}
-
-.builder .layer .resize.bottom.right,.builder .layer .resize.top.left {
-    cursor: nwse-resize
-}
-
-.builder .layer .resize.bottom.left,.builder .layer .resize.top.right {
-    cursor: nesw-resize
-}
-
-.builder .layer .resize.top.left {
-    border-top-left-radius: .75rem
-}
-
-.builder .layer .resize.top.right {
-    border-top-right-radius: .75rem
-}
-
-.builder .layer .resize.bottom.left {
-    border-bottom-left-radius: .75rem
-}
-
-.builder .layer .resize.bottom.right {
-    border-bottom-right-radius: .75rem
-}
-
-.builder .layer .resize.top {
-    top: -.5rem;
-    border-bottom: 0;
-    cursor: nwse-resize
-}
-
-.builder .layer .resize.bottom {
-    bottom: -.5rem;
-    border-top: 0
-}
-
-.builder .layer .resize.left {
-    left: -.5rem;
-    border-right: 0
-}
-
-.builder .layer .resize.right {
-    right: -.5rem;
-    border-left: 0
-}
-
-.builder .action {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1000px;
-    background: rgba(0,0,0,.25);
-    color: #fff;
-    font-size: 3rem;
-    transition: .2s linear;
-    user-select: none;
-    cursor: pointer
-}
-
-.builder .action img {
-    display: block;
-    pointer-events: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    opacity: .85;
-    transition: .2s linear
-}
-
-.builder .layer .action:hover img {
-    opacity: 1
-}
-
-.builder .flip,.builder .move,.builder .remove {
-    left: calc(50% - 1.5rem)
-}
-
-.builder .move,.builder .rotate {
-    top: calc(50% - 1.5rem)
-}
-
-.builder .rotate.left {
-    left: -4rem
-}
-
-.builder .rotate.right {
-    right: -4rem
-}
-
-.builder .flip,.builder .move,.builder .text-minus,.builder .text-plus {
-    top: -4rem
-}
-
-.builder .remove {
-    bottom: -4rem
-}
-
-.builder .remove:hover {
-    background: rgba(161,75,75,.5)
-}
-
-.builder .move {
-    cursor: move
-}
-
-.builder .text-minus {
-    left: calc(50% - 5rem)
-}
-
-.builder .text-plus {
-    right: calc(50% - 5rem)
-}
-
-.builder .layer-t>img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    pointer-events: none
-}
-
-.builder .layer.flipped .layer-t>img {
-    transform: scaleX(-1)
-}
-
-.builder .tools {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: #fff;
-    border-radius: .5rem;
-    overflow: auto;
-    max-height: calc(100% - 2rem);
-    box-shadow: 0 0 1rem rgba(0,0,0,.1)
-}
-
-.builder .tools img {
-    display: block;
-    width: 3rem;
-    padding: .5rem .75rem;
-    cursor: pointer
-}
-
-.builder .tools .tool-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    padding: .5rem .75rem;
-    font-size: 1.75rem;
-    text-align: center;
-    cursor: pointer;
-    font: "CodeSaver"
-}
-
-.builder .buttons {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 1rem
-}
-
-.builder .buttons .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    padding: 0;
-    background: #fff;
-    border-radius: .5rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,.1);
-    cursor: pointer
-}
-
-/* button image size */
-.builder .buttons img {
-    width: 1.5rem
+    margin-right: 0.5rem; /* Space between button text and icon */
 }
 
 /* ######################################## */
 
 @media screen and (max-width: 800px) {
     .builder {
-        margin-top:4.5rem;
-        height: calc(var(--h) - 4.5rem)
+        margin-top: 4.5rem;
+        height: calc(var(--h) - 4.5rem);
     }
 
     .builder .canvas {
-        max-height: calc(var(--h) - 7rem)
+        max-height: calc(var(--h) - 7rem);
     }
 }
 
 /* ######################################## */
 
 @media screen and (orientation: portrait) {
-    .builder .canvas,.builder .layers {
-        transform:translate(-50%,calc(-50% - 2.5rem))
+    .builder .canvas,
+    .builder .layers {
+        transform: translate(-50%, calc(-50% - 2.5rem));
     }
 
     .builder .canvas {
         max-width: calc(100% - 2rem);
-        max-height: calc(var(--h) - 11.5rem)
+        max-height: calc(var(--h) - 11.5rem);
     }
 
     .builder .tools {
@@ -676,17 +472,17 @@ footer {
         bottom: 1rem;
         display: flex;
         flex-direction: row;
-        max-width: calc(100% - 12rem)
+        max-width: calc(100% - 12rem);
     }
 
     .builder .buttons {
         top: unset;
         bottom: 1rem;
-        flex-direction: row-reverse
+        flex-direction: row-reverse;
     }
 
     .builder .buttons .button {
         width: 4rem;
-        height: 4rem
+        height: 4rem;
     }
 }
