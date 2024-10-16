@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-body,html {
+body, html {
     overscroll-behavior: none;
 }
 
@@ -535,16 +535,28 @@ footer {
     opacity: 1;
 }
 
+/* Change the rotate left button to a drag button */
+.builder .drag {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    left: -4rem; /* Position it where the rotate left button was */
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    cursor: move; /* Change the cursor to indicate it's draggable */
+}
+
 .builder .flip, .builder .move, .builder .remove {
     left: calc(50% - 1.5rem);
 }
 
 .builder .move, .builder .rotate {
     top: calc(50% - 1.5rem);
-}
-
-.builder .rotate.left {
-    left: -4rem;
 }
 
 .builder .rotate.right {
