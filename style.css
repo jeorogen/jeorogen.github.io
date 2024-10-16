@@ -596,7 +596,7 @@ footer {
     max-height: calc(100% - 2rem);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     width: 100%; /* Full width on mobile */
-    max-width: 600px; /* Limit toolbar width on larger screens */
+    max-width: 2000px; /* Limit toolbar width to 2000px */
     padding: 0.5rem; /* Add padding for a cleaner look */
 }
 
@@ -633,7 +633,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%; /* Make buttons full width */
-    max-width: 250px;
+    max-width: 500px; /* Set max width of buttons to 500px */
     padding: 0.5rem;
     background-color: var(--button-color);
     border-radius: 0.5rem;
