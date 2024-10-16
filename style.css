@@ -609,7 +609,7 @@ footer {
     max-height: 400px; /* Limit the toolbar height */
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     width: 100%; /* Full width on mobile */
-    max-width: 2000px; /* Limit toolbar width to 2000px */
+    max-width: 5000px; /* Limit toolbar width to 2000px */
     padding: 0.5rem; /* Add padding for a cleaner look */
 }
 
