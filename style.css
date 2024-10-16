@@ -442,11 +442,12 @@ footer {
 /* Toolbar adjustments for mobile */
 @media screen and (max-width: 800px) {
     .builder .tools {
-        width: 100%; /* Make toolbar wider */
+        width: 90%; /* Increase toolbar width significantly */
         display: flex;
         flex-wrap: wrap; /* Ensure toolbar elements wrap on smaller screens */
         justify-content: center;
         padding: 1rem;
+        margin: 0 auto; /* Center the toolbar */
     }
 }
 
