@@ -12,25 +12,20 @@
   <body>
     <div class="builder">
       <a class="download" download="meme.jpg"></a>
+      
+      <!-- Upload Wrapper for file input -->
       <div class="upload-wrapper">
         <div class="title t">Build a $rogen meme</div>
         <div class="target">Click to upload an image and start editing</div>
         <input type="file" class="upload" accept=".png,.jpg,.jpeg">
-
-        <!-- Move the buttons underneath the file input -->
-        <div class="buttons">
-          <div class="button save" title="Save">
-            <img src="images/builder/save.svg" alt="Save"> Save
-          </div>
-          <div class="button reupload" title="Upload another image">
-            <img src="images/builder/upload.svg" alt="Upload"> Reupload
-          </div>
-        </div>
       </div>
 
+      <!-- Canvas and layers -->
       <div class="inner">
         <img class="canvas" alt="Canvas">
         <div class="layers"></div>
+
+        <!-- Actions toolbar -->
         <div class="actions">
           <div class="tools">
             <div class="tool-text">Text</div>
@@ -56,10 +51,21 @@
             <img src="images/faces/USSSputify.png" alt="USSSputify">
             <img src="images/faces/GudStuf.png" alt="GudStuf">
           </div>
+
+          <!-- Buttons for Save and Reupload -->
+          <div class="buttons">
+            <div class="button save" title="Save">
+              <img src="images/builder/save.svg" alt="Save"> Save
+            </div>
+            <div class="button reupload" title="Upload another image">
+              <img src="images/builder/upload.svg" alt="Upload"> Reupload
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Navigation bar -->
     <nav>
       <div class="wrapper">
         <a href="https://www.jeorogensol.xyz" target="_blank">
